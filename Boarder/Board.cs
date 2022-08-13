@@ -23,6 +23,10 @@ namespace Boarder
         {
             get
             {
+                if (!items.Any())
+                {
+                    throw new ArgumentNullException("No items");
+                }
                 return items.Count;
             }
         }
